@@ -13,81 +13,83 @@ Feel free to use your workstation to test your answers to the questions that don
 ==========
 1. Write the command that you would use to change to the root directory.
 ----------
-
+/
 
 
 ==========
 2. Write the command that you would use to change to your home directory.
 ----------
-
+~
 
 
 ==========
 3. Write the command that you would use to change to your Desktop folder.
 ----------
-
+cd
 
 
 ==========
 4. What's the absolute path to your home directory?
 ----------
-
+cd ~
 
 
 ==========
 5. What's the absolute path to your Desktop directory?
 ----------
-
+ls /users/odalyssanchez/desktop
 
 
 ==========
 6. What's the absolute path to your Desktop directory?
 ----------
-
+ls /users/odalyssanchez/desktop
 
 
 ==========
 7. If you're in your home directory, what's the relative path to your Desktop directory?
 ----------
-
+cd /odayssanchez/desktop
 
 ==========
 8. If you're in your home directory, how would you create a new directory on your desktop called stuff without changing your directory?  Write your command below.
 ----------
-
+mkdir odalyssanchez/desktop/stuff
 
 
 ==========
 9. If you're in your root directory, how would you create a new directory on your desktop called more-stuff without changing your directory?  Write your command below.
 ----------
 
-
+mkdir /users/odalyssanchez/desktop/more-stuff
 
 ==========
 10. If you're in your Desktop directory, how would you create a new directory on your desktop called even-more-stuff?  Write your command below.
 ----------
-
+mkdir -p /even-more-stuff
 
 
 ==========
 11. If you're in your home directory, how would you change to the directory right above it using a relative path (it should bring you to /Users)?  Write your command below.
 ----------
-
+cd /users
 
 
 ==========
 12. If you're in your Desktop directory, how would you change to two directories right above it (again, this should be /Users) using a relative path?  Write your command below.
 ----------
-
+cd ../../
 
 
 ==========
 13. What's the shortcut for changing to the directory that you were just previously in?  For example, if I were in /Volumes... and I changed to /Users/profesor/Desktop, what's a quick way of changing to /Volumes without writing something like cd /Volumes?
 ----------
+pushd 
 
 ==========
 14. How would you show all of the files (including hidden ones) with detailed (long) information that are on you're Desktop if you're in your home directory?  Write your command below.
 ----------
+ls -al
 
 ==========
 15. 
@@ -99,3 +101,19 @@ e. Determine which folder in my-stuff was created most recently by using ls.  (t
 f. Remove that folder.
 g. Show all of the commands that you used to complete the above exercise.  (for example, how did you determine which folder in my-stuff was the most recent?).  Use the command: history ... to help you remember what you did!  Paste the commands below.
 ----------
+a & b) mkdir /users/odalyssanchez/desktop/my-stuff
+ls -al
+c) Odalyss-MBP:desktop odalyssanchez$ hostname
+Odalyss-MBP.home
+
+d) Odalyss-MBP:desktop odalyssanchez$ cd /users/odalyssanchez/desktop/my-stuff
+Odalyss-MBP:my-stuff odalyssanchez$ ls -al
+total 0
+drwxr-xr-x  3 odalyssanchez  staff  102 Feb  9 21:15 .
+drwx------+ 7 odalyssanchez  staff  238 Feb  9 21:07 ..
+drwxr-xr-x  2 odalyssanchez  staff   68 Feb  9 21:15 home
+Odalyss-MBP:my-stuff odalyssanchez$ 
+
+f) Odalyss-MBP:desktop odalyssanchez$ ls
+even-more-stuff	my-stuff	stuff
+Odalyss-MBP:desktop odalyssanchez$ rmdir my-stuff
